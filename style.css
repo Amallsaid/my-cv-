@@ -1,33 +1,91 @@
+/* General styling */
 body {
+    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-
-}
-header {
-    background-color: #333;
-    font-size: 30px;
-    color: #f6f2f2;
-    padding: 5px;
-    text-align: center;
-}
-main {
-    padding: 20px;
-}
-section {
-    margin-bottom: 20px;
-    color: #4e4a57;
-}
-h1, h2 {
-    font-size: 19px;
     color: #333;
 }
-footer {
-    background-color: #fffdfd;
-    color: gray;
+
+/* Header */
+.cv-header {
+    background-color: #9388dc;
+    color: white;
     text-align: center;
-    position: right;
-    
-  
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    position: relative;
+    z-index: 1;
 }
+
+.cv-header h1 {
+    font-size: 30px;
+}
+
+.cv-header p {
+    margin-bottom: 0px;
+}
+
+/* CV sections */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #8299dc;
+    border-radius: 8px;
+}
+
+.card h2 {
+    color: #34495e;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+/* Skills using CSS Grid */
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Flexbox */
+.cv-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CSS specificity example */
+.card h2 {
+    color: #34495e;
+}
+
+.card h2 {
+    color: #34495e;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .cv-header h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+.cv-label {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 2;
+    font-size: 10px;
+}
+
+}
+
